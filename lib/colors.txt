@@ -1,0 +1,3 @@
+Main grey: #303030
+
+Os bar: #000
