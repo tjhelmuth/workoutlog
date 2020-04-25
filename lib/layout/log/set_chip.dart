@@ -23,7 +23,7 @@ class SetChip extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Theme(child: Material(
-      color: this.isComplete ? Colors.grey[300] : Colors.transparent,
+      color: this.isComplete ? Colors.grey[800] : Colors.transparent,
       elevation: 5,
       child: InkWell(
         customBorder: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5))),
@@ -34,6 +34,7 @@ class SetChip extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(5)),
           ),
           padding: EdgeInsets.all(8),
+
           child: Row(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.end,
