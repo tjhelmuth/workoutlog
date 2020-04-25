@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workout_app/layout/log/set_chip.dart';
 import 'package:workout_app/model/exercise_spec.dart';
+import 'package:workout_app/model/set_result.dart';
 
 
 
@@ -25,7 +26,7 @@ class ExerciseView extends StatelessWidget {
             child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 8),
                 child: Wrap(
-                  runSpacing: 0,
+                  runSpacing: 4,
                   spacing: 4,
                   children: this._getSpecChips()
                 )
@@ -38,7 +39,10 @@ class ExerciseView extends StatelessWidget {
 
   List<Widget> _getSpecChips(){
     var setSpecs = this._spec.sets;
-    return setSpecs.map((spec) => SetChip(7, 8, false, targetReps: spec.targetReps)).toList();
+
+    SetResult result = SetResult(7, 80);
+
+    return setSpecs.map((spec) => SetChip(spec, result)).toList();
   }
 
 }

@@ -5,6 +5,7 @@ import 'package:workout_app/model/exercise_spec.dart';
 import 'package:workout_app/model/set_spec.dart';
 
 ExerciseSpec spec = ExerciseSpec("Bench", [SetSpec(5), SetSpec(7), SetSpec(7), SetSpec(5), SetSpec(3)]);
+ExerciseSpec dips = ExerciseSpec("Dips", [SetSpec(12), SetSpec(12), SetSpec(12)]);
 
 class WorkoutLog extends StatelessWidget {
   @override
@@ -21,6 +22,8 @@ class WorkoutLog extends StatelessWidget {
           child: Column(
             children: [
               ExerciseView(spec),
+              Divider(indent: 16, endIndent: 16),
+              ExerciseView(dips)
             ]
           )
         )
