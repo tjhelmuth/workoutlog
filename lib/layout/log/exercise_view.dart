@@ -15,25 +15,33 @@ class ExerciseView extends StatelessWidget {
     return Container (
       padding: EdgeInsets.all(8),
 
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          // name
-          Text(_spec.name, style: Theme.of(context).textTheme.subhead),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
 
-          Expanded(
-            flex: 1,
-            child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 8),
-                child: Wrap(
-                  runSpacing: 4,
-                  spacing: 4,
-                  children: this._getSpecChips()
+        children: [
+          Container(
+            padding: EdgeInsets.all(8),
+            child: Text(_spec.name, style: Theme.of(context).textTheme.title),
+          ),
+          Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                    flex: 1,
+                    child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 8),
+                        child: Wrap(
+                            runSpacing: 4,
+                            spacing: 4,
+                            children: this._getSpecChips()
+                        )
+                    )
                 )
-            )
+              ]
           )
         ]
       )
+
     );
   }
 
