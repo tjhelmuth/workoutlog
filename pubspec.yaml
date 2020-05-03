@@ -14,13 +14,17 @@ description: Workout tracking&#x2F;building application
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
+  uuid: 2.0.4
+  get_it: ^4.0.2
+
   provider: ^3.0.0
+  path_provider:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -30,6 +34,7 @@ dev_dependencies:
   test:
   flutter_test:
     sdk: flutter
+  mockito:
 
 
 # For information on the generic Dart part of this file, see the
